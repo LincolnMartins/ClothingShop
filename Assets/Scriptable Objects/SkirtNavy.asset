@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e197cde2b7cfe5c428d76f493889f706, type: 3}
+  m_Name: SkirtNavy
+  m_EditorClassIdentifier: 
+  Icon: {fileID: 1329033789, guid: 8f2ff11e5d3d37e41870eee2df3bc297, type: 3}
+  Preview: {fileID: -675700248, guid: 634959287ad807d49bcab0e28a93ff8e, type: 3}
+  spriteSheet: {fileID: 2800000, guid: 634959287ad807d49bcab0e28a93ff8e, type: 3}
+  animator: {fileID: 9100000, guid: cf759ca723524924987bdf017443968a, type: 2}
+  itemName: Navy Skirt
+  price: 100
+  type: Leg

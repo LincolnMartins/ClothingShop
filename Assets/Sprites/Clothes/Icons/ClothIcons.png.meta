@@ -1,0 +1,1050 @@
+fileFormatVersion: 2
+guid: 550a154da06a8ee4596b39085412eb28
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ClothIcons_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 713.125
+        width: 100.4
+        height: 101.875
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55be1776a97de8f45a46028c25f40519
+      internalID: 1338484912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ClothIcons_1
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 713.125
+        width: 100.4
+        height: 101.875
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46805f2be9cc7774da18d5e06725e9fd
+      internalID: -966339307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ClothIcons_2
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 713.125
+        width: 100.4
+        height: 101.875
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31142ee2610e5f14babf39a629d9f6b9
+      internalID: -772626532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ClothIcons_3
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 713.125
+        width: 100.4
+        height: 101.875
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2620debb6fd46f84a81c6112f8b113ae
+      internalID: 1563897489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ClothIcons_4
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 713.125
+        width: 100.4
+        height: 101.875
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9e9b20d19b8641419a1362bb74daefe
+      internalID: -701698690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ClothIcons_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 612.125
+        width: 100.4
+        height: 101.875
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb2ba4a0e201b19459b50c9a559041c6
+      internalID: -1977458804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ClothIcons_6
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 612.125
+        width: 100.4
+        height: 101.875
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 177fe3d350222ad4085ec2e075969433
+      internalID: 1452449327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ClothIcons_7
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 612.125
+        width: 100.4
+        height: 101.875
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee07b77c036fa8748bdd3616f21415e0
+      internalID: -1308238735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ClothIcons_8
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 612.125
+        width: 100.4
+        height: 101.875
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bc74f57edce0ce4a91590863f60f934
+      internalID: 735703548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ClothIcons_9
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 612.125
+        width: 100.4
+        height: 101.875
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 540f8f8585879c64fb5b6a8a94f9d2d7
+      internalID: -243373253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ClothIcons_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 511.125
+        width: 100.4
+        height: 101.875
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cb8b4663f50a1e43951fa6b2724d344
+      internalID: 725773379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ClothIcons_11
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 511.125
+        width: 100.4
+        height: 101.875
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bf9ea94f38799046809add961827f0b
+      internalID: -2097195433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ClothIcons_12
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 511.125
+        width: 100.4
+        height: 101.875
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22d7fb11897e7a94a8f3af747f6db734
+      internalID: 1209600391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ClothIcons_13
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 511.125
+        width: 100.4
+        height: 101.875
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecac2d78d8c354a46a7c74a670ace263
+      internalID: -1155516350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ClothIcons_14
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 511.125
+        width: 100.4
+        height: 101.875
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b6238675d5e8c94ca7935a723115471
+      internalID: 1742621456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ClothIcons_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 410.125
+        width: 100.4
+        height: 101.875
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f14fe32b16d00d45ace5fe92273fbfa
+      internalID: -667276010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ClothIcons_16
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 410.125
+        width: 100.4
+        height: 101.875
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1442338be042bd4cb160075c2426648
+      internalID: -1609348844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ClothIcons_17
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 410.125
+        width: 100.4
+        height: 101.875
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2e35b48b0e1cf647aa2ab831d4c03b6
+      internalID: 1959760390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ClothIcons_18
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 410.125
+        width: 100.4
+        height: 101.875
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3f79d7072721af4d9d1846c2aff935e
+      internalID: -20516866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ClothIcons_19
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 410.125
+        width: 100.4
+        height: 101.875
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bac80281021f6f14781840beae44ab2e
+      internalID: 1842775326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ClothIcons_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 309.125
+        width: 100.4
+        height: 101.875
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b027c4149311e7045947ed9ab103ed56
+      internalID: -1438113868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ClothIcons_21
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 309.125
+        width: 100.4
+        height: 101.875
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 653d4ebb506d2a04a89aee046da92269
+      internalID: -1907691577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ClothIcons_22
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 309.125
+        width: 100.4
+        height: 101.875
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42bd8bf03bbacd94f9c6cd27e7929da6
+      internalID: 488968874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ClothIcons_23
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 309.125
+        width: 100.4
+        height: 101.875
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23141a4a50ffa2441bf9017163d4e7dc
+      internalID: -516402948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ClothIcons_24
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 309.125
+        width: 100.4
+        height: 101.875
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8afb85fd3d0bd3c408be91f2db6b1125
+      internalID: -716690642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ClothIcons_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 208.125
+        width: 100.4
+        height: 101.875
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe9a76339a846444aa82bce09b207a1d
+      internalID: -752405839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ClothIcons_26
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 208.125
+        width: 100.4
+        height: 101.875
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4df6903675c81244188b79f26c09f916
+      internalID: 1415099448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ClothIcons_27
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 208.125
+        width: 100.4
+        height: 101.875
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62739bb050423ae40951c4ab4c566fe9
+      internalID: 1749435063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ClothIcons_28
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 208.125
+        width: 100.4
+        height: 101.875
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c31f6f9f1b236f349bb10c09afb1f08a
+      internalID: 1821814234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ClothIcons_29
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 208.125
+        width: 100.4
+        height: 101.875
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8921c0feaf361fe4fa3084915513eaca
+      internalID: 1064388516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ClothIcons_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 107.125
+        width: 100.4
+        height: 101.875
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05308e2f117f30b4e94eba82fe1bd590
+      internalID: 999947160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ClothIcons_31
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 107.125
+        width: 100.4
+        height: 101.875
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5b971ac4a41a134daab16b3119a66f8
+      internalID: -156007041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ClothIcons_32
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 107.125
+        width: 100.4
+        height: 101.875
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dacbc5858ff023845aa9987592ecfb09
+      internalID: -1329625135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ClothIcons_33
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 107.125
+        width: 100.4
+        height: 101.875
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f335bb7999aee8d478a507a3c5bd716b
+      internalID: -328611907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ClothIcons_34
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 107.125
+        width: 100.4
+        height: 101.875
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1ac28c603999aa42ae5e21fd90e1c95
+      internalID: -1529636080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ClothIcons_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6.125
+        width: 100.4
+        height: 101.875
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 561b07b77f58b5644896fa4f4d65e940
+      internalID: 779738310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ClothIcons_36
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 6.125
+        width: 100.4
+        height: 101.875
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acebfe3a1abbff243a4400ebc17be195
+      internalID: 1529534792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ClothIcons_37
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 6.125
+        width: 100.4
+        height: 101.875
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6249c588676354b47bf283cd7059f757
+      internalID: -258574780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ClothIcons_38
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 6.125
+        width: 100.4
+        height: 101.875
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72fbc1e4ead3c9d4e8750b4d500ab5ac
+      internalID: 234094806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ClothIcons_39
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 6.125
+        width: 100.4
+        height: 101.875
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b724c3cedf3fe349b99b97b4b2ebbee
+      internalID: 571258066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      ClothIcons_2: -772626532
+      ClothIcons_18: -20516866
+      ClothIcons_20: -1438113868
+      ClothIcons_25: -752405839
+      ClothIcons_30: 999947160
+      ClothIcons_21: -1907691577
+      ClothIcons_7: -1308238735
+      ClothIcons_26: 1415099448
+      ClothIcons_14: 1742621456
+      ClothIcons_0: 1338484912
+      ClothIcons_9: -243373253
+      ClothIcons_1: -966339307
+      ClothIcons_24: -716690642
+      ClothIcons_33: -328611907
+      ClothIcons_10: 725773379
+      ClothIcons_39: 571258066
+      ClothIcons_29: 1064388516
+      ClothIcons_17: 1959760390
+      ClothIcons_36: 1529534792
+      ClothIcons_32: -1329625135
+      ClothIcons_37: -258574780
+      ClothIcons_27: 1749435063
+      ClothIcons_6: 1452449327
+      ClothIcons_23: -516402948
+      ClothIcons_28: 1821814234
+      ClothIcons_19: 1842775326
+      ClothIcons_16: -1609348844
+      ClothIcons_3: 1563897489
+      ClothIcons_4: -701698690
+      ClothIcons_8: 735703548
+      ClothIcons_38: 234094806
+      ClothIcons_31: -156007041
+      ClothIcons_5: -1977458804
+      ClothIcons_15: -667276010
+      ClothIcons_35: 779738310
+      ClothIcons_11: -2097195433
+      ClothIcons_34: -1529636080
+      ClothIcons_22: 488968874
+      ClothIcons_13: -1155516350
+      ClothIcons_12: 1209600391
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -19,9 +19,11 @@ public class CharacterController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Get Controls Info
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
+        //Set animations
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
@@ -37,6 +39,6 @@ public class CharacterController : MonoBehaviour
     // FixedUpdate is called after Update and is used to resolve physics
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement * movespeed * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + movement * movespeed * Time.fixedDeltaTime); //Move Character
     }
 }

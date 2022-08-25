@@ -15,10 +15,14 @@ public class ClothAnimController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        animator.SetFloat("Horizontal", parentAnimator.GetFloat("Horizontal"));
-        animator.SetFloat("Vertical", parentAnimator.GetFloat("Vertical"));
-        animator.SetFloat("Speed", parentAnimator.GetFloat("Speed"));
-        animator.SetFloat("Idle_Horizontal", parentAnimator.GetFloat("Idle_Horizontal"));
-        animator.SetFloat("Idle_Vertical", parentAnimator.GetFloat("Idle_Vertical"));
+        //Set Animations if Animator Controller is not null
+        if (animator.runtimeAnimatorController != null)
+        {
+            animator.SetFloat("Horizontal", parentAnimator.GetFloat("Horizontal"));
+            animator.SetFloat("Vertical", parentAnimator.GetFloat("Vertical"));
+            animator.SetFloat("Speed", parentAnimator.GetFloat("Speed"));
+            animator.SetFloat("Idle_Horizontal", parentAnimator.GetFloat("Idle_Horizontal"));
+            animator.SetFloat("Idle_Vertical", parentAnimator.GetFloat("Idle_Vertical"));
+        }
     }
 }
