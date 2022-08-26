@@ -34,6 +34,9 @@ public class CharacterController : MonoBehaviour
             animator.SetFloat("Idle_Vertical", movement.y);
         }
 
+        //hit esc to quit game
+        if (Input.GetKeyDown("escape"))
+            Application.Quit();
     }
 
     // FixedUpdate is called after Update and is used to resolve physics
