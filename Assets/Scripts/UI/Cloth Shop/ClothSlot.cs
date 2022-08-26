@@ -38,33 +38,7 @@ public class ClothSlot : MonoBehaviour, IPointerClickHandler
                 Destroy(gameObject);
             }
 
-            //Set cloth on preview
-            foreach (Transform child in clothstore.preview.transform)
-            {
-                if (child.name == clothData.type)
-                {
-                    switch (child.name)
-                    {
-                        case "Chest":
-                            {
-                                clothstore.preview.GetComponent<Preview>().chest.sprite = clothData.Preview;
-                                break;
-                            }
-                        case "Leg":
-                            {
-                                clothstore.preview.GetComponent<Preview>().leg.sprite = clothData.Preview;
-                                break;
-                            }
-                        case "Foot":
-                            {
-                                clothstore.preview.GetComponent<Preview>().foot.sprite = clothData.Preview;
-                                break;
-                            }
-                    }
-
-                    break;
-                }
-            }
+            CanvasManager.canvasManager.SetClothPreview(clothstore.preview, clothData); //Set cloth on the preview screen
         }
     }
 
@@ -75,7 +49,7 @@ public class ClothSlot : MonoBehaviour, IPointerClickHandler
         {
             clothstore.UnselectCloth(); //Unselect last selected cloth
             selected = true; //Set Cloth selected
-            transform.localScale += new Vector3(.3f, .3f, .3f);
+            transform.localScale += new Vector3(.1f, .1f, .1f);
         }
     }
 }

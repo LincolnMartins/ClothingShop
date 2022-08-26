@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Cloth
   - Shopkeeper
+  - Wardrobe
   layers:
   - Default
   - TransparentFX

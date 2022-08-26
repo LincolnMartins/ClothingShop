@@ -16,9 +16,6 @@ public class ClothStore : MonoBehaviour
     public TextMeshProUGUI total;
     public TextMeshProUGUI balance;
 
-    private bool openAnimation = false;
-    private bool closeAnimation = false;
-
     public float animationSpeed = 5f;
 
     // Start is called before the first frame update
@@ -36,36 +33,12 @@ public class ClothStore : MonoBehaviour
     private void OnEnable()
     {
         gameObject.transform.localScale = Vector3.zero; //Set UI scale to zero
-        openAnimation = true; //set animation to be executed
+        CanvasManager.canvasManager.openAnimation[gameObject] = true; //set animation to be executed
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Animate UI when show/hide
-        if(openAnimation)
-        {
-            gameObject.transform.localScale += new Vector3(1, 1, 1) * animationSpeed * Time.deltaTime;
-
-            if (gameObject.transform.localScale.x > 1 || gameObject.transform.localScale.y > 1 || gameObject.transform.localScale.z > 1)
-            {
-                gameObject.transform.localScale = new Vector3(1, 1, 1);
-                openAnimation = false;
-            }
-        }
-        else if(closeAnimation)
-        {
-            gameObject.transform.localScale -= new Vector3(1, 1, 1) * animationSpeed * Time.deltaTime;
-
-            if (gameObject.transform.localScale.x <= 0 || gameObject.transform.localScale.y <= 0 || gameObject.transform.localScale.z <= 0)
-            {
-                gameObject.transform.localScale = new Vector3(0, 0, 0);
-                closeAnimation = false;
-                UnselectCloth(); //Unselect selected cloth in the shop
-                gameObject.SetActive(false);
-            }
-        }
-
         //Calculate and Show Total Value and Balance
         var totalvalue = PurchaseValue();
         total.text = $"${totalvalue}";
@@ -86,7 +59,8 @@ public class ClothStore : MonoBehaviour
     {
         if (!CanvasManager.canvasManager.messageBox.activeSelf)
         {
-            closeAnimation = true;
+            UnselectCloth(); //Unselect selected cloth in the shop
+            CanvasManager.canvasManager.closeAnimation[gameObject] = true;
             foreach (Transform child in cartView.transform)
                 Destroy(child.gameObject);
         }
@@ -112,7 +86,30 @@ public class ClothStore : MonoBehaviour
                 //Create a clone of the selected cloth in the cart
                 var prefab = Instantiate(clothslot, clothstore.cartView.transform);
                 prefab.GetComponent<ClothSlot>().SetClothData(clothslot.clothData);
-                prefab.transform.localScale = new Vector3(1, 1, 1);
+                prefab.transform.localScale = new Vector3(.5f, .5f, .5f);
+            }
+        }
+    }
+
+    //Called when click purchase button
+    public void Purchase()
+    {
+        if (!CanvasManager.canvasManager.messageBox.activeSelf)
+        {
+            var total = PurchaseValue();
+            if (CanvasManager.canvasManager.playerBalance >= total)
+            {
+                CanvasManager.canvasManager.playerBalance -= total;
+
+                foreach (Transform child in cartView.transform)
+                    CanvasManager.canvasManager.playerClothes.Add(child.gameObject.GetComponent<ClothSlot>().clothData);
+
+                CloseStore();
+            }
+            else //Open Message box if not enough money
+            {
+                CanvasManager.canvasManager.messageBox.SetActive(true);
+                CanvasManager.canvasManager.openAnimation[CanvasManager.canvasManager.messageBox] = true;
             }
         }
     }
@@ -126,7 +123,7 @@ public class ClothStore : MonoBehaviour
             if (clothslot.selected)
             {
                 clothslot.selected = false;
-                clothslot.transform.localScale = new Vector3(1, 1, 1);
+                clothslot.transform.localScale = new Vector3(.5f, .5f, .5f);
             }
         }
     }
