@@ -1,4 +1,3 @@
-using TMPro;
 using UnityEngine;
 
 public class Wardrobe : MonoBehaviour
@@ -9,16 +8,31 @@ public class Wardrobe : MonoBehaviour
 
     [HideInInspector] public OwnedCloth selectedCloth;
 
+    public AudioSource dropClothSound;
+
     void OnEnable()
     {
+        var clothespool = CanvasManager.canvasManager.clothesPool;
+
         //List all player Clothes
         foreach (var cloth in CanvasManager.canvasManager.playerClothes)
         {
-            var prefab = Instantiate(ownedClothPrefab, viewList.transform);
-            prefab.GetComponent<OwnedCloth>().SetClothData(cloth);
+            if (cloth != null)
+            {
+                foreach (var pooledCloth in clothespool)
+                {
+                    if (!pooledCloth.activeSelf)
+                    {
+                        pooledCloth.SetActive(true);
+                        pooledCloth.GetComponent<OwnedCloth>().SetClothData(cloth);
+                        break;
+                    }
+                }
+            }
         }
 
         CanvasManager.canvasManager.openAnimation[gameObject] = true; //execute open animation
+        CanvasManager.canvasManager.openUI.Play();
     }
 
     //Close Wardrobe Window
@@ -27,9 +41,10 @@ public class Wardrobe : MonoBehaviour
         if (!CanvasManager.canvasManager.messageBox.activeSelf)
         {
             foreach (Transform child in viewList.transform)
-                Destroy(child.gameObject);
+                child.gameObject.SetActive(false);
 
             CanvasManager.canvasManager.closeAnimation[gameObject] = true; //execute close animation
+            CanvasManager.canvasManager.closeUI.Play();
         }
     }
 
@@ -89,10 +104,15 @@ public class Wardrobe : MonoBehaviour
     //Called when player click in "drop cloth" button
     public void DropCloth()
     {
+        dropClothSound.Play();
+
+        if (selectedCloth == null) return;
+
         int totalcloth = 0;
         foreach(var cloth in CanvasManager.canvasManager.playerClothes)
-            if (cloth.name == selectedCloth.clothData.name)
-                totalcloth++;
+            if(cloth != null)
+                if (cloth.name == selectedCloth.clothData.name)
+                    totalcloth++;
 
         if (totalcloth == 1)
         {
@@ -146,9 +166,10 @@ public class Wardrobe : MonoBehaviour
         //Remove Cloth
         foreach (var cloth in CanvasManager.canvasManager.playerClothes)
         {
+            if (cloth == null) continue;
             if (cloth.name == selectedCloth.clothData.name)
             {
-                Destroy(selectedCloth.gameObject);
+                selectedCloth.gameObject.SetActive(false);
                 CanvasManager.canvasManager.playerClothes.Remove(cloth);
                 break;
             }

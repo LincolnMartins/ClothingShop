@@ -1,5 +1,5 @@
-using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine;
 
 public class PlayerInteraction : MonoBehaviour, IPointerClickHandler
 {

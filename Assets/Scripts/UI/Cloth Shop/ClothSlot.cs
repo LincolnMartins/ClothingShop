@@ -3,11 +3,12 @@ using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
 
-
 public class ClothSlot : MonoBehaviour, IPointerClickHandler
 {
     [HideInInspector] public Cloth clothData = null;
     [HideInInspector] public bool selected = false;
+
+    public AudioSource soundClick;
 
     private ClothStore clothstore;
 
@@ -27,6 +28,7 @@ public class ClothSlot : MonoBehaviour, IPointerClickHandler
     // Called when player click over this object
     public void OnPointerClick(PointerEventData eventData)
     {
+        soundClick.Play();
         if (clothData != null && !CanvasManager.canvasManager.messageBox.activeSelf)
         {
             if (transform.parent.gameObject == clothstore.shopView) //Check if the object is in the shop
@@ -35,7 +37,7 @@ public class ClothSlot : MonoBehaviour, IPointerClickHandler
             }
             else if (transform.parent.gameObject == clothstore.cartView) //Check if the object is in the cart
             {
-                Destroy(gameObject);
+                gameObject.SetActive(false);
             }
 
             CanvasManager.canvasManager.SetClothPreview(clothstore.preview, clothData); //Set cloth on the preview screen

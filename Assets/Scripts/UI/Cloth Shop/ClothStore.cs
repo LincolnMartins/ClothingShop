@@ -1,6 +1,6 @@
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
+using TMPro;
 
 public class ClothStore : MonoBehaviour
 {
@@ -16,6 +16,8 @@ public class ClothStore : MonoBehaviour
     public TextMeshProUGUI total;
     public TextMeshProUGUI balance;
 
+    public AudioSource cartSound;
+
     public float animationSpeed = 5f;
 
     // Start is called before the first frame update
@@ -24,8 +26,15 @@ public class ClothStore : MonoBehaviour
         //Put clothes for sale
         foreach(var cloth in clothes)
         {
-            var prefab = Instantiate(clothSlotPrefab, shopView.transform);
-            prefab.GetComponent<ClothSlot>().SetClothData(cloth);
+            foreach (var shopcloth in CanvasManager.canvasManager.shopClothes)
+            {
+                if (!shopcloth.activeSelf)
+                {
+                    shopcloth.SetActive(true);
+                    shopcloth.GetComponent<ClothSlot>().SetClothData(cloth);
+                    break;
+                }
+            }
         }
     }
 
@@ -34,6 +43,7 @@ public class ClothStore : MonoBehaviour
     {
         gameObject.transform.localScale = Vector3.zero; //Set UI scale to zero
         CanvasManager.canvasManager.openAnimation[gameObject] = true; //set animation to be executed
+        CanvasManager.canvasManager.openUI.Play();
     }
 
     // Update is called once per frame
@@ -50,7 +60,8 @@ public class ClothStore : MonoBehaviour
     {
         var val = 0f;
         foreach (Transform child in cartView.transform)
-            val += child.gameObject.GetComponent<ClothSlot>().clothData.price;
+            if(child.gameObject.activeSelf)
+                val += child.gameObject.GetComponent<ClothSlot>().clothData.price;
         return val;
     }
 
@@ -61,8 +72,9 @@ public class ClothStore : MonoBehaviour
         {
             UnselectCloth(); //Unselect selected cloth in the shop
             CanvasManager.canvasManager.closeAnimation[gameObject] = true;
+            CanvasManager.canvasManager.closeUI.Play();
             foreach (Transform child in cartView.transform)
-                Destroy(child.gameObject);
+                child.gameObject.SetActive(false);
         }
     }
 
@@ -71,22 +83,37 @@ public class ClothStore : MonoBehaviour
     {
         if (!CanvasManager.canvasManager.messageBox.activeSelf)
         {
+            cartSound.Play();
             foreach (Transform child in shopView.transform)
             {
                 var clothslot = child.gameObject.GetComponent<ClothSlot>();
-                if (!clothslot.selected) continue; //Check what cloth is selected
+                if (!clothslot.selected) continue; //Check if cloth is selected
 
-                var clothstore = CanvasManager.canvasManager.clothStoreUI.GetComponent<ClothStore>();
-
+                /*
                 //Check if player already has same cloth in cart
-                /*foreach (Transform child in clothstore.cartView.transform)
+                foreach (Transform child in CanvasManager.canvasManager.clothStoreUI.GetComponent<ClothStore>().cartView.transform)
                     if (child.gameObject.GetComponent<ClothSlot>().clothData == clothslot.clothData)
-                        return;*/
+                        return;
+                */
 
-                //Create a clone of the selected cloth in the cart
-                var prefab = Instantiate(clothslot, clothstore.cartView.transform);
-                prefab.GetComponent<ClothSlot>().SetClothData(clothslot.clothData);
-                prefab.transform.localScale = new Vector3(.5f, .5f, .5f);
+                //make a clone of the selected cloth in the cart
+                foreach (var cartslot in CanvasManager.canvasManager.cartSlots)
+                {
+                    if (!cartslot.activeSelf)
+                    {
+                        cartslot.SetActive(true);
+                        cartslot.GetComponent<ClothSlot>().SetClothData(clothslot.clothData);
+                        cartslot.transform.localScale = new Vector3(.5f, .5f, .5f);
+                        return;
+                    }
+                }
+
+                //Open message box
+                CanvasManager.canvasManager.messageBox.SetActive(true);
+                CanvasManager.canvasManager.SetMessageBoxText("Your cart is full!");
+                CanvasManager.canvasManager.openAnimation[CanvasManager.canvasManager.messageBox] = true;
+                CanvasManager.canvasManager.openUI.Play();
+                break;
             }
         }
     }
@@ -96,21 +123,30 @@ public class ClothStore : MonoBehaviour
     {
         if (!CanvasManager.canvasManager.messageBox.activeSelf)
         {
-            var total = PurchaseValue();
-            if (CanvasManager.canvasManager.playerBalance >= total)
+            var totalclothes = CanvasManager.canvasManager.playerClothes.Count;
+            foreach (Transform child in cartView.transform) if (child.gameObject.activeSelf) totalclothes++;
+            if (totalclothes < 100)
             {
-                CanvasManager.canvasManager.playerBalance -= total;
+                var total = PurchaseValue();
+                if (CanvasManager.canvasManager.playerBalance >= total)
+                {
+                    CanvasManager.canvasManager.playerBalance -= total;
 
-                foreach (Transform child in cartView.transform)
-                    CanvasManager.canvasManager.playerClothes.Add(child.gameObject.GetComponent<ClothSlot>().clothData);
+                    foreach (Transform child in cartView.transform)
+                        if (child.gameObject.activeSelf)
+                            CanvasManager.canvasManager.playerClothes.Add(child.gameObject.GetComponent<ClothSlot>().clothData);
 
-                CloseStore();
+                    CloseStore();
+                    return;
+                }
+                else CanvasManager.canvasManager.SetMessageBoxText("Not enough money!");
             }
-            else //Open Message box if not enough money
-            {
-                CanvasManager.canvasManager.messageBox.SetActive(true);
-                CanvasManager.canvasManager.openAnimation[CanvasManager.canvasManager.messageBox] = true;
-            }
+            else CanvasManager.canvasManager.SetMessageBoxText("Not enough space on wardrobe!");
+
+            //Open Message box 
+            CanvasManager.canvasManager.messageBox.SetActive(true);
+            CanvasManager.canvasManager.openAnimation[CanvasManager.canvasManager.messageBox] = true;
+            CanvasManager.canvasManager.openUI.Play();
         }
     }
 

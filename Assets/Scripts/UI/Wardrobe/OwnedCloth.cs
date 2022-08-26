@@ -1,12 +1,14 @@
-using TMPro;
-using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine;
+using TMPro;
 
 public class OwnedCloth : MonoBehaviour
 {
     [HideInInspector] public Cloth clothData;
     public Image clothIcon;
     public TextMeshProUGUI clothName;
+
+    public AudioSource soundClick;
 
     private Wardrobe wardrobe;
 
@@ -27,6 +29,7 @@ public class OwnedCloth : MonoBehaviour
     //Called when player clicks over cloth on the list
     public void SetClothOnPreview()
     {
+        soundClick.Play();
         CanvasManager.canvasManager.SetClothPreview(wardrobe.preview, clothData);
         wardrobe.selectedCloth = this;
     }

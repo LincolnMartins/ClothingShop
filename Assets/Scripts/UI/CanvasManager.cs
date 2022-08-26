@@ -1,7 +1,8 @@
 using System.Collections.Generic;
-using TMPro;
-using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine;
+using TMPro;
+
 
 public class CanvasManager : MonoBehaviour
 {
@@ -11,7 +12,9 @@ public class CanvasManager : MonoBehaviour
     public GameObject clothStoreUI;
     public GameObject WardrobeUI;
     public GameObject messageBox;
+    public TextMeshProUGUI moneyText;
 
+    //UI Animations
     [HideInInspector] public Dictionary<GameObject, bool> openAnimation = new Dictionary<GameObject, bool>();
     [HideInInspector] public Dictionary<GameObject, bool> closeAnimation = new Dictionary<GameObject, bool>();
 
@@ -20,7 +23,15 @@ public class CanvasManager : MonoBehaviour
     [HideInInspector] public List<Cloth> playerClothes = new List<Cloth>();
     [HideInInspector] public Cloth[] playerWearing = new Cloth[3];
 
+    public AudioSource openUI;
+    public AudioSource closeUI;
+
     public float animationSpeed = 5f;
+
+    //Object Pooling
+    public List<GameObject> clothesPool;
+    public List<GameObject> shopClothes;
+    public List<GameObject> cartSlots;
 
     private void Awake()
     {
@@ -43,11 +54,34 @@ public class CanvasManager : MonoBehaviour
 
         openAnimation.Add(messageBox, false);
         closeAnimation.Add(messageBox, false);
+
+        moneyText.text = $"{playerBalance}";
+
+        //Object Pooling
+        var wardrobe = WardrobeUI.GetComponent<Wardrobe>();
+        var clothstore = clothStoreUI.GetComponent<ClothStore>();
+        for (int i = 0; i < 100; i++)
+        {
+            clothesPool.Add(Instantiate(wardrobe.ownedClothPrefab, wardrobe.viewList.transform));
+            clothesPool[i].SetActive(false);
+
+            shopClothes.Add(Instantiate(clothstore.clothSlotPrefab, clothstore.shopView.transform));
+            shopClothes[i].SetActive(false);
+
+            cartSlots.Add(Instantiate(clothstore.clothSlotPrefab, clothstore.cartView.transform));
+            cartSlots[i].SetActive(false);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        //Update money text
+        if (playerBalance > int.Parse(moneyText.text))
+            moneyText.text = (int.Parse(moneyText.text) + 1).ToString();
+        else if (playerBalance < int.Parse(moneyText.text))
+            moneyText.text = (int.Parse(moneyText.text) - 1).ToString();
+
         //Animate GUI when show
         foreach (var opengui in openAnimation)
         {
@@ -135,5 +169,14 @@ public class CanvasManager : MonoBehaviour
     public void Close()
     {
         closeAnimation[messageBox] = true;
+        closeUI.Play();
+    }
+
+    //Change message text in the message box
+    public void SetMessageBoxText(string message)
+    {
+        foreach(Transform child in messageBox.transform)
+            if(child.name == "message")
+                child.GetComponent<TextMeshProUGUI>().text = message;
     }
 }
